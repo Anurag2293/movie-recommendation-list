@@ -28,7 +28,9 @@ const Summary = () => {
     return (
         <div className='container mt-4'>
             <h2>{movie?.show.name}</h2>
+            <hr />
             <h5>Summary:</h5>
+            <p>Premiered On: </p>
             <p dangerouslySetInnerHTML={renderedHtml} />
             <Link to={`/book/${movieId}`}>
                 <Button className='mt-3' variant="primary">Book the Show</Button>{' '}

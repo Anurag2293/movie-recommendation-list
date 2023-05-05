@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import { AiFillStar } from 'react-icons/ai'
 
 import { MovieType } from '../pages/Home'
-
 import reactSvg from '../assets/react.svg'
 
 interface SectionProps {
@@ -27,8 +26,10 @@ const Section = ({ movie, handleSummaryClick }: SectionProps) => {
 
                 <div className="fine-details">
                     <h5>
-                        Score: {score.toString()} |
-                        <AiFillStar /> : {show.rating.average !== null ? show.rating.average : '-'}/10
+                        Score: {score.toString()} | 
+                        <span style={{marginLeft: '5px'}}>
+                        {show.rating.average !== null ? show.rating.average : '-'}/10 <AiFillStar />
+                        </span>
                     </h5>
                     <h6>
                         {show.genres.map(genre => (
