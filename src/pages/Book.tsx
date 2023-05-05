@@ -49,7 +49,6 @@ const Book = () => {
 
         <div>
             <h1>Book the Show</h1>
-            <div>{movie?.show.name}</div>
             <form className='form-container' onSubmit={handleSubmit}>
                 <label htmlFor="movieName">Movie Name</label>
                 <input id="movieName" name="movieName" value={formDetails.movieName} placeholder="Titanic" />
